@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adler</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    main {
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #333;
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
+    }
+    p {
+      line-height: 1.6;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    footer p {
+      margin: 0;
+    }
+    #ads {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .ad {
+      width: 30%;
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      text-align: center;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .ad img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .ad p {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #333;
+    }
+    .ad a {
+      display: inline-block;
+      padding: 8px 12px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .ad a:hover {
+      background-color: #0056b3;
+    }
+    button {
+        display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    #claimContainer {
+        display: none;
+    }
+
+    button.claim-btn {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    button.claim-btn:hover {
+        background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Adler</h1>
+    <p>Join us and start earning!</p>
+  </header>
+
+  <main>
+    <section id="ads">
+      <!-- Script-generated ad placeholders will be inserted here -->
+    </section>
+    <button class="claim-btn" onclick="toggleClaimContainer()">Claim Cash</button>
+    <div class="claim-container" id="claimContainer">
+        <!-- Add content for claiming cash here -->
+        <h2>Claim Cash</h2>
+        <p>This is where users can claim their cash.</p>
+        <p>CURRENTLY OFF</p>
+    </div>
+</div>
+
+
+    
+    <section id="terms-of-service">
+        <h2>Terms of Service</h2>
+        <p>By using our services, you agree to abide by the following terms:</p>
+        <p>**Terms of Service**</p>
+        
+        <p>**1. Introduction**</p>
+  
+        <p>These Terms of Service ("Terms") govern your use of the services provided by Adler ("Company", "we", "us", or "our") related to the Adler service (the "Service"). By accessing or using the Service, you agree to be bound by these Terms. If you disagree with any part of the Terms, then you may not access the Service.</p>
+  
+        <p>**2. Use of Service**</p>
+  
+        <p>1. **Eligibility:** You must be at least 9 years old and capable of entering into legally binding agreements to use the Service. By using the Service, you represent and warrant that you meet these eligibility requirements.</p>
+  
+        <p>2. **User Account:** You may need to create an account to access certain features of the Service. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account.</p>
+  
+        <p>3. **Prohibited Activities:** You agree not to engage in any of the following prohibited activities:
+        - Violating any applicable laws or regulations.
+        - Infringing upon the intellectual property rights of others.
+        - Engaging in fraudulent, deceptive, or misleading conduct.
+        - Interfering with or disrupting the Service or servers or networks connected to the Service.
+        - Generating invalid clicks, impressions, or other interactions with advertisements.</p>
+  
+        <p>4. **Termination:** We reserve the right to suspend or terminate your access to the Service at any time for any reason without prior notice or liability.</p>
+  
+        <p>**3. Intellectual Property**</p>
+  
+        <p>1. **Ownership:** All content, materials, and trademarks on the Service are owned by or licensed to the Company and are protected by intellectual property laws.</p>
+  
+        <p>2. **License:** Subject to these Terms, we grant you a limited, non-exclusive, non-transferable license to access and use the Service for your personal or internal business purposes.</p>
+  
+        <p>**4. Privacy**</p>
+  
+        <p>Our Privacy Policy governs the collection, use, and disclosure of your personal information. By using the Service, you consent to the terms of our Privacy Policy.</p>
+  
+        <p>**5. Disclaimer of Warranties**</p>
+  
+        <p>The Service is provided on an "as is" and "as available" basis, without any warranties of any kind, either express or implied. We do not warrant that the Service will be error-free or uninterrupted.</p>
+  
+        <p>**6. Limitation of Liability**</p>
+  
+        <p>To the fullest extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or relating to your use of or inability to use the Service.</p>
+  
+        <p>**7. Indemnification**</p>
+  
+        <p>You agree to indemnify, defend, and hold harmless the Company and its affiliates, officers, directors, employees, and agents from and against any and all claims, liabilities, damages, losses, costs, expenses, or fees (including reasonable attorneys' fees) arising out of or relating to your use of the Service or any violation of these Terms.</p>
+  
+        <p>**8. Modifications to Terms**</p>
+  
+        <p>We reserve the right to update or modify these Terms at any time without prior notice. Your continued use of the Service after any such changes constitutes your acceptance of the revised Terms.</p>
+  
+        <p>**9. Governing Law and Dispute Resolution**</p>
+  
+        <p>These Terms shall be governed by and construed in accordance with the laws of [Your Jurisdiction], without regard to its conflict of law principles. Any dispute arising out of or relating to these Terms shall be resolved exclusively in the state or federal courts located in [Your Jurisdiction].</p>
+  
+        <p>**10. Contact Us**</p>
+  
+        <p>If you have any questions about these Terms, please contact us at swashington14@mtlstudents.net.</p>
+        
+        <!-- Add more terms here -->
+      </section>
+    </main>
+  
+    <footer>
+      <p>Contact us: Silas Paracca sparacca36@mtlstudents.net, Stepan Washington swashington14@mtlstudents.net, Nolan Liang nliang20@mtlstudents.net, Zimo Wang zwang99@mtlstudents.net</p>
+    </footer>
+
+    <script>
+        // Array of ad categories
+        const adCategories = ['Business Solution', 'Exclusive Offer', 'Tech Gadgets', 'Fashion Trends', 'Travel Deals'];
+    
+        // Function to generate random ads
+        function generateAds() {
+          const adsContainer = document.getElementById('ads');
+          let adsHTML = ''; // Initialize an empty string for ad HTML
+    
+          for (let i = 0; i < 500; i++) {
+            const randomCategory = adCategories[Math.floor(Math.random() * adCategories.length)];
+            adsHTML += `
+              <div class="ad">
+                <img src="https://via.placeholder.com/80" alt="Ad Placeholder">
+                <p>${randomCategory}</p>
+                <a href="https://www.google.com">Explore Now</a>
+              </div>
+            `;
+          }
+    
+          // Append all ads to the ads container at once
+          adsContainer.innerHTML = adsHTML;
+        }
+        
+        function toggleClaimContainer() {
+            var container = document.getElementById("claimContainer");
+            if (container.style.display === "none") {
+                container.style.display = "block";
+            } else {
+                container.style.display = "none";
+            }
+        }
+    
+        // Generate ads when the page loads
+        window.onload = generateAds;
+      </script>
+</body>
+</html>
+
